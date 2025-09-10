@@ -1,0 +1,62 @@
+flota365-vue/
+├── public/                        # Archivos estáticos
+│   ├── img/                       # Imágenes estáticas como el logo
+│   ├── favicon.ico                # Favicon del sitio
+│   └── index.html                 # Plantilla HTML base
+├── src/
+│   ├── assets/                    # Recursos estáticos
+│   │   ├── css/                   # Hojas de estilo
+│   │   │   ├── styles.css         # Estilos principales
+│   │   │   └── notifications.css  # Estilos para notificaciones
+│   │   └── img/                   # Imágenes de la aplicación
+│   ├── components/                # Componentes Vue reutilizables
+│   │   ├── common/                # Componentes comunes
+│   │   │   ├── Header.vue         # Componente de cabecera
+│   │   │   ├── Sidebar.vue        # Barra lateral de navegación
+│   │   │   ├── StatusBadge.vue    # Indicador de estado
+│   │   │   ├── Modal.vue          # Ventana modal
+│   │   │   ├── Notification.vue   # Sistema de notificaciones
+│   │   │   ├── Pagination.vue     # Componente de paginación
+│   │   │   └── index.js           # Exportación de componentes comunes
+│   │   ├── vehicles/              # Componentes para vehículos
+│   │   │   └── VehicleForm.vue    # Formulario de vehículos
+│   │   ├── drivers/               # Componentes para conductores
+│   │   │   └── DriverForm.vue     # Formulario de conductores
+│   │   └── analytics/             # Componentes para analytics
+│   │       └── AnalysisProgress.vue # Progreso de análisis
+│   ├── data/                      # Datos simulados (JSONs)
+│   │   ├── vehicles.json          # Datos de vehículos
+│   │   ├── drivers.json           # Datos de conductores
+│   │   ├── fleets.json            # Datos de flotas
+│   │   └── stats.json             # Estadísticas y datos de analítica
+│   ├── router/                    # Configuración de rutas
+│   │   └── index.js               # Definición de rutas
+│   ├── services/                  # Servicios para comunicación con API
+│   │   ├── api.js                 # Cliente API principal
+│   │   └── mockAdapter.js         # Adaptadores para simulación de backend
+│   ├── store/                     # Gestión de estado con Vuex
+│   │   ├── index.js               # Store principal
+│   │   └── modules/               # Módulos Vuex
+│   │       ├── vehicles.js        # Estado de vehículos
+│   │       ├── drivers.js         # Estado de conductores
+│   │       └── fleets.js          # Estado de flotas
+│   ├── views/                     # Vistas principales
+│   │   ├── Dashboard.vue          # Vista de dashboard
+│   │   ├── VehicleManagement.vue  # Gestión de vehículos
+│   │   ├── DriverManagement.vue   # Gestión de conductores
+│   │   ├── FleetManagement.vue    # Gestión de flotas
+│   │   ├── Reporting.vue          # Generación de reportes
+│   │   ├── Monitoring.vue         # Monitoreo en tiempo real
+│   │   ├── Analytics.vue          # Análisis predictivo con IA
+│   │   └── Login.vue              # Página de inicio de sesión
+│   ├── App.vue                    # Componente raíz
+│   └── main.js                    # Punto de entrada de la aplicación
+├── .eslintrc.js                   # Configuración de ESLint
+├── .eslintignore                  # Archivos ignorados por ESLint
+├── .gitignore                     # Archivos ignorados por git
+├── babel.config.js                # Configuración de Babel
+├── firebase.json                  # Configuración de Firebase
+├── package.json                   # Dependencias del proyecto
+├── package-lock.json              # Versiones exactas de dependencias
+├── README.md                      # Documentación del proyecto
+└── vue.config.js                  # Configuración de Vue CLI

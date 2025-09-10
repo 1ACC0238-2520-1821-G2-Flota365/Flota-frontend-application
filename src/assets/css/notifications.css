@@ -1,0 +1,128 @@
+/* notifications.css - Estilos para el sistema de notificaciones de Flota365 */
+
+/* Contenedor de notificaciones */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 350px;
+    max-width: 90%;
+}
+
+/* Notificación individual */
+.notification {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    animation: notification-slide-in 0.3s ease-out forwards;
+    border-left: 4px solid #6CDAE7; /* Color por defecto */
+}
+
+/* Animaciones para la notificación */
+@keyframes notification-slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.notification-hiding {
+    animation: notification-slide-out 0.3s ease-out forwards;
+}
+
+@keyframes notification-slide-out {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Icono de la notificación */
+.notification i:first-child {
+    font-size: 1.25rem;
+    margin-right: 15px;
+}
+
+/* Botón de cierre */
+.notification-close {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: color 0.2s;
+}
+
+.notification-close:hover {
+    color: #333;
+}
+
+/* Contenido del mensaje */
+.notification span {
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* Tipos de notificaciones */
+.notification-info {
+    border-left-color: #6CDAE7; /* Turquesa - color primario */
+}
+
+.notification-info i:first-child {
+    color: #6CDAE7;
+}
+
+.notification-success {
+    border-left-color: #4CAF50; /* Verde - éxito */
+}
+
+.notification-success i:first-child {
+    color: #4CAF50;
+}
+
+.notification-warning {
+    border-left-color: #FFC107; /* Amarillo - advertencia */
+}
+
+.notification-warning i:first-child {
+    color: #FFC107;
+}
+
+.notification-error {
+    border-left-color: #F44336; /* Rojo - error */
+}
+
+.notification-error i:first-child {
+    color: #F44336;
+}
+
+/* Responsive - adaptación para dispositivos móviles */
+@media (max-width: 576px) {
+    .notification-container {
+        top: 10px;
+        right: 10px;
+        width: calc(100% - 20px);
+    }
+    
+    .notification {
+        padding: 12px;
+        font-size: 0.938rem;
+    }
+}
